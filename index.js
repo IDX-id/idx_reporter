@@ -1,5 +1,4 @@
 const {GetContent} = require('./helper/pupet');
-const {GetLastRade} = require('./helper/GetLastRade');
 
 /**
  * exsample

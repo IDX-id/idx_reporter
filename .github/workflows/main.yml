@@ -19,8 +19,8 @@ jobs:
         # Hit the webhook endpoint to rebuild  from the "main" branch
         run: |
           echo `date` > last_log.txt
-          sudo npm i
-          sudo node index.js
+          npm i
+          node index.js
       - name: Commit
         run: |
           git config --local user.name "github-actions[bot]"

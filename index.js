@@ -1,5 +1,7 @@
 const {GetContent} = require('./helper/pupet');
+const {GetLastRade} = require('./helper/GetLastRade');
 
+ 
 /**
  * exsample
  * GetContent("GetStockSummary").then(console.log).catch(console.error);

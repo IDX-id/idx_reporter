@@ -15,7 +15,8 @@ const DataTransform = function (data, url) {
         Rekapitulasi = OriginUrl +
                 '/TradingSummary/GetRecapSummary?Length=10000&date=' + lastDate,
         GetStockSummary = OriginUrl + '/TradingSummary/GetStockSummary?Length=10000&dat' +
-                'e=' + lastDate
+                'e=' + lastDate,
+        GetAllStocks = OriginUrl + "/Helper/GetEmiten?emitenType=s"
 
     let BuildFolder = url,
         UrlBuilder,
@@ -28,7 +29,7 @@ const DataTransform = function (data, url) {
 
     switch (BuildFolder) {
         case Marketime:
-            UrlBuilder =  data
+            UrlBuilder = data
             FilePath = './report/trade_summary/Marketime.json'
             writeFileSync(FilePath, UrlBuilder);
             break;
@@ -43,7 +44,7 @@ const DataTransform = function (data, url) {
             writeFileSync(FilePath, UrlBuilder);
             break;
         case MarketIndexSektoral:
-            UrlBuilder =JSON.stringify(d['data'])
+            UrlBuilder = JSON.stringify(d['data'])
             FilePath = './report/trade_summary/MarketIndexSektoral.json'
             writeFileSync(FilePath, UrlBuilder);
             break;
@@ -55,6 +56,11 @@ const DataTransform = function (data, url) {
         case GetStockSummary:
             UrlBuilder = JSON.stringify(d)
             FilePath = './report/trade_summary/GetStockSummary.json'
+            writeFileSync(FilePath, UrlBuilder);
+            break;
+        case GetAllStocks:
+            UrlBuilder = JSON.stringify(d)
+            FilePath = './report/data/GetAllStocks.json'
             writeFileSync(FilePath, UrlBuilder);
             break;
         default:

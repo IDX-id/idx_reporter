@@ -9,7 +9,6 @@ const GetContent = function (Urls) {
             const TrueUrl = UrlBuilder(Urls);
             //insert code here
             const browser = await puppeteer.launch({headless: 1})
-
             const page = await browser.newPage()
             await page.setUserAgent(
                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck' +

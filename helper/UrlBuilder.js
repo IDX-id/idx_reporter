@@ -16,7 +16,8 @@ const UrlBuilder = function (data) {
         Rekapitulasi = OriginUrl +
                 '/TradingSummary/GetRecapSummary?Length=10000&date=' + lastDate,
         GetStockSummary = OriginUrl + '/TradingSummary/GetStockSummary?Length=10000&dat' +
-                'e=' + lastDate
+                'e=' + lastDate,
+        GetAllStocks = OriginUrl + "/Helper/GetEmiten?emitenType=s"
 
     let BuildFolder = data.toLowerCase(),
         UrlBuilder;
@@ -37,9 +38,12 @@ const UrlBuilder = function (data) {
         case "rekapitulasi":
             UrlBuilder = Rekapitulasi
             break;
-            case "getstocksummary":
-                UrlBuilder = GetStockSummary
-                break;
+        case "getstocksummary":
+            UrlBuilder = GetStockSummary
+            break;
+        case "allstocks":
+            UrlBuilder = GetAllStocks
+            break;
         default:
             UrlBuilder = Marketime
     }

@@ -20,6 +20,7 @@ jobs:
         run: |
           echo `date` > last_log.txt
           npm i
+          npm update
           node index.js
       - name: Commit
         run: |

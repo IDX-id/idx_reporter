@@ -8,7 +8,7 @@ const UrlBuilder = function (data) {
         flag: 'r'
     });
 
-    const OriginUrl = 'https://www.idx.co.id/umbraco/Surface',
+    const OriginUrl = 'https://www.idx.co.id/primary',
         Marketime = OriginUrl + '/Helper/GetMarketTime?culture=id-id',
         MarketSummary = OriginUrl + '/Home/GetTradeSummary',
         MarketIndex = OriginUrl + '/StockData/GetConstituent',

@@ -7,7 +7,7 @@ const DataTransform = function (data, url) {
         encoding: 'utf8',
         flag: 'r'
     });
-    const OriginUrl = 'https://www.idx.co.id/umbraco/Surface',
+    const OriginUrl = 'https://www.idx.co.id/primary',
         Marketime = OriginUrl + '/Helper/GetMarketTime?culture=id-id',
         MarketSummary = OriginUrl + '/Home/GetTradeSummary',
         MarketIndex = OriginUrl + '/StockData/GetConstituent',

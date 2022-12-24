@@ -8,10 +8,10 @@ const {GetLastRade} = require('./helper/GetLastRade');
  */
 
 GetLastRade()
-// GetContent("marketime")
-// GetContent("marketindex")
-// GetContent("sum")
-// GetContent("marketindexsektoral")
-// GetContent("Rekapitulasi")
-// GetContent("GetStockSummary")
-// GetContent("allstocks")
+GetContent("marketime")
+GetContent("marketindex")
+GetContent("sum")
+GetContent("marketindexsektoral")
+GetContent("Rekapitulasi")
+GetContent("GetStockSummary")
+GetContent("allstocks")
